@@ -171,5 +171,85 @@ Date:   Tue Nov 26 16:10:22 2013 -0800
 fgl@fgl-desktop:~/gahblog$ git log --pretty=oneline
 f27febcfb28aa77bda6de5ee053d9ae74c4f079d 2013-11-26 Small change in How-to...
 8709344edeb2b7f537c26b420317fe8ee25c9b62 2013-11-26 Initial files plus docs/how-
-(END) 
+fgl@fgl-desktop:~/gahblog$ 
+
+================
+fgl@fgl-desktop:~/gahblog$ git remote -v
+fgl@fgl-desktop:~/gahblog$ git remote add https://github.com/garyhds/gahblog
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+fgl@fgl-desktop:~/gahblog$ git remote add gahblog https://github.com/garyhds/gahblog
+fgl@fgl-desktop:~/gahblog$ git remote -v
+gahblog	https://github.com/garyhds/gahblog (fetch)
+gahblog	https://github.com/garyhds/gahblog (push)
+fgl@fgl-desktop:~/gahblog$ 
+================
+# ===  Note:
+# ===  gedit docs/how-to-setup-gahblog-repo.txt
+# ===  
+fgl@fgl-desktop:~/gahblog$ 
+
+================
+fgl@fgl-desktop:~/gahblog$ git show-ref
+6852d680dcb2234d83745271490dd6db7370477e refs/heads/master
+fgl@fgl-desktop:~/gahblog$ git ls-remote
+fatal: No remote configured to list refs from.
+fgl@fgl-desktop:~/gahblog$ git pull gahblog
+warning: no common commits
+remote: Counting objects: 15, done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 15 (delta 4), reused 0 (delta 0)
+Unpacking objects: 100% (15/15), done.
+From https://github.com/garyhds/gahblog
+ * [new branch]      master     -> gahblog/master
+You asked to pull from the remote 'gahblog', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+fgl@fgl-desktop:~/gahblog$ git show-ref
+6852d680dcb2234d83745271490dd6db7370477e refs/heads/master
+f664bb7e67eb75878e18e9080497a07bbd728edc refs/remotes/gahblog/master
+fgl@fgl-desktop:~/gahblog$ git pull gahblog master
+From https://github.com/garyhds/gahblog
+ * branch            master     -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ README.md | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+ create mode 100644 README.md
+fgl@fgl-desktop:~/gahblog$ git status
+# On branch master
+nothing to commit, working directory clean
+fgl@fgl-desktop:~/gahblog$ 
+================
+# ===  Note:
+# ===  gedit docs/how-to-setup-gahblog-repo.txt
+# ===  
+fgl@fgl-desktop:~/gahblog$ 
+
+================
+fgl@fgl-desktop:~/gahblog$ git pull gahblog master
+From https://github.com/garyhds/gahblog
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+fgl@fgl-desktop:~/gahblog$ git status
+# On branch master
+nothing to commit, working directory clean
+fgl@fgl-desktop:~/gahblog$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   docs/how-to-setup-gahblog-repo.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+fgl@fgl-desktop:~/gahblog$ 
 
