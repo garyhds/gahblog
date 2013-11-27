@@ -114,6 +114,9 @@ fgl@fgl-desktop:~/gahblog$ git commit
  create mode 100644 commentaddentry.php
  create mode 100644 commentaddform.php
  create mode 100644 docs/how-to-setup-gahblog-repo.txt
+fgl@fgl-desktop:~/gahblog$ 
+
+================
 fgl@fgl-desktop:~/gahblog$ git log --pretty=oneline
 8709344edeb2b7f537c26b420317fe8ee25c9b62 2013-11-26 Initial files plus docs/how-
 fgl@fgl-desktop:~/gahblog$ git status
@@ -121,4 +124,52 @@ fgl@fgl-desktop:~/gahblog$ git status
 nothing to commit, working directory clean
 fgl@fgl-desktop:~/gahblog$ 
 
+================
+# ===  Note:
+# ===  gedit docs/how-to-setup-gahblog-repo.txt
+# ===  
+fgl@fgl-desktop:~/gahblog$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   docs/how-to-setup-gahblog-repo.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+fgl@fgl-desktop:~/gahblog$ 
+
+================
+fgl@fgl-desktop:~/gahblog$ git add . -A
+fgl@fgl-desktop:~/gahblog$ git log 
+commit 8709344edeb2b7f537c26b420317fe8ee25c9b62
+Author: Gary Hornbeck <garyh.ds@gmail.com>
+Date:   Tue Nov 26 16:10:22 2013 -0800
+
+    2013-11-26 Initial files plus docs/how-to-setup-gahblog-repo.txt
+fgl@fgl-desktop:~/gahblog$ 
+
+================
+fgl@fgl-desktop:~/gahblog$ git commit -m"2013-11-26 Small change in How-to..."
+[master f27febc] 2013-11-26 Small change in How-to...
+ 1 file changed, 105 insertions(+)
+fgl@fgl-desktop:~/gahblog$ 
+
+================
+fgl@fgl-desktop:~/gahblog$ git log
+commit f27febcfb28aa77bda6de5ee053d9ae74c4f079d
+Author: Gary Hornbeck <garyh.ds@gmail.com>
+Date:   Tue Nov 26 16:25:01 2013 -0800
+
+    2013-11-26 Small change in How-to...
+
+commit 8709344edeb2b7f537c26b420317fe8ee25c9b62
+Author: Gary Hornbeck <garyh.ds@gmail.com>
+Date:   Tue Nov 26 16:10:22 2013 -0800
+
+    2013-11-26 Initial files plus docs/how-to-setup-gahblog-repo.txt
+fgl@fgl-desktop:~/gahblog$ git log --pretty=oneline
+f27febcfb28aa77bda6de5ee053d9ae74c4f079d 2013-11-26 Small change in How-to...
+8709344edeb2b7f537c26b420317fe8ee25c9b62 2013-11-26 Initial files plus docs/how-
+(END) 
 
