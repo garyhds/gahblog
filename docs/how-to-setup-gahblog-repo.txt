@@ -1,0 +1,19 @@
+date: Tue 26 Nov 2013 15:24:33 PST 
+
+RE: PHP/MySQL git branch for code development
+ -: initial code please add doc and github/gahblog
+
+fgl@fgl-desktop:~/gahblog$ ls -l
+total 32
+-rw-r--r-- 1 fgl fgl 2767 2013-10-02 13:46 blogaddentry.php
+-rw-r--r-- 1 fgl fgl 1912 2013-08-25 12:53 blogaddform.php
+-rw-r--r-- 1 fgl fgl  899 2013-08-18 11:28 blogaddforms.css
+-rw-r--r-- 1 fgl fgl 3152 2013-11-26 14:22 blogindex.php
+-rw-r--r-- 1 fgl fgl 4638 2013-08-24 18:13 blogshow.php
+-rw-r--r-- 1 fgl fgl 3135 2013-08-18 22:30 commentaddentry.php
+-rw-r--r-- 1 fgl fgl 2457 2013-08-18 21:18 commentaddform.php
+fgl@fgl-desktop:~/gahblog$ mkdir docs
+fgl@fgl-desktop:~/gahblog$ touch docs/how-to-setup-gahblog-repo.txt
+fgl@fgl-desktop:~/gahblog$ 
+
+

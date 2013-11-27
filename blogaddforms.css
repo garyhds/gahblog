@@ -1,0 +1,35 @@
+/*-- filename: gahblog/blogaddforms.php
+      - Sun 18 Aug 2013 11:30:11 PDT reorganized with modifications
+      - old filename: lesson10-12_blog/lab10_o1-blogentry.css
+     Intro PHP/SQL lesson 10 Project Addressbook - Part 2
+      - Referenced by lab10_o1-blogentry.html
+      - Fri 02 Aug 2013 03:01:34 PM PDT 
+     calling html is located in ghornbec/gah_phpsql/lesson10-12_blog
+*/
+/*  Reference: OST HTML and CSS lesson 11, mypage_lab11tableforms.html  */
+/*  <style> from html  */
+table {
+   border-collapse: collapse;
+}
+th {
+   background-color: lightgrey;
+   text-align: right;
+   padding: 10px;
+}
+td {
+   background-color: #a6d7a6;
+   padding: 10px;
+}
+caption {
+   caption-side: bottom;
+   font-style: italic;
+   font-size: 80%;
+}
+/*  Reference: OST JavaScript JSON and Ajax lesson 10, lab10_h3-strings.html  */
+/*  <style> from html  */
+textarea {
+   width:  700px;
+   height: 400px;
+}
+
+
