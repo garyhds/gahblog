@@ -16,4 +16,109 @@ fgl@fgl-desktop:~/gahblog$ mkdir docs
 fgl@fgl-desktop:~/gahblog$ touch docs/how-to-setup-gahblog-repo.txt
 fgl@fgl-desktop:~/gahblog$ 
 
+================
+fgl@fgl-desktop:~/ourfirstrepo$ cd ../gahblog
+fgl@fgl-desktop:~/gahblog$ git status
+fatal: Not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fgl@fgl-desktop:~/gahblog$ ls -l
+total 32
+-rw-r--r-- 1 fgl fgl 2767 2013-10-02 13:46 blogaddentry.php
+-rw-r--r-- 1 fgl fgl 1912 2013-08-25 12:53 blogaddform.php
+-rw-r--r-- 1 fgl fgl  899 2013-08-18 11:28 blogaddforms.css
+-rw-r--r-- 1 fgl fgl 3152 2013-11-26 14:22 blogindex.php
+-rw-r--r-- 1 fgl fgl 4638 2013-08-24 18:13 blogshow.php
+-rw-r--r-- 1 fgl fgl 3135 2013-08-18 22:30 commentaddentry.php
+-rw-r--r-- 1 fgl fgl 2457 2013-08-18 21:18 commentaddform.php
+fgl@fgl-desktop:~/gahblog$ 
+
+================
+fgl@fgl-desktop:~/gahblog$ mkdir docs
+fgl@fgl-desktop:~/gahblog$ touch docs/how-to-setup-gahblog-repo.txt
+fgl@fgl-desktop:~/gahblog$ git init gahblog
+Initialized empty Git repository in /home/fgl/gahblog/gahblog/.git/
+fgl@fgl-desktop:~/gahblog$ git status
+fatal: Not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fgl@fgl-desktop:~/gahblog$ tree
+.
+├── blogaddentry.php
+├── blogaddform.php
+├── blogaddforms.css
+├── blogindex.php
+├── blogshow.php
+├── commentaddentry.php
+├── commentaddform.php
+├── docs
+│   └── how-to-setup-gahblog-repo.txt
+└── gahblog
+
+2 directories, 8 files
+fgl@fgl-desktop:~/gahblog$ git add . -A
+fatal: Not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fgl@fgl-desktop:~/gahblog$ pwd
+/home/fgl/gahblog
+fgl@fgl-desktop:~/gahblog$ 
+
+================
+# ===  Note:
+# ===  fgl@fgl-desktop:~/gahblog$ git init gahblog
+# ===  Initialized empty Git repository in /home/fgl/gahblog/gahblog/.git/
+# ===  The Fix:
+# ===  fgl@fgl-desktop:~/gahblog$ mv -v gahblog/.git .
+# ===  
+fgl@fgl-desktop:~/gahblog$ git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	blogaddentry.php
+#	blogaddform.php
+#	blogaddforms.css
+#	blogindex.php
+#	blogshow.php
+#	commentaddentry.php
+#	commentaddform.php
+#	docs/
+nothing added to commit but untracked files present (use "git add" to track)
+fgl@fgl-desktop:~/gahblog$ git add . -A
+fgl@fgl-desktop:~/gahblog$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   blogaddentry.php
+#	new file:   blogaddform.php
+#	new file:   blogaddforms.css
+#	new file:   blogindex.php
+#	new file:   blogshow.php
+#	new file:   commentaddentry.php
+#	new file:   commentaddform.php
+#	new file:   docs/how-to-setup-gahblog-repo.txt
+#
+fgl@fgl-desktop:~/gahblog$ git commit
+[master (root-commit) 8709344] 2013-11-26 Initial files plus docs/how-to-setup-gahblog-repo.txt
+ 8 files changed, 513 insertions(+)
+ create mode 100644 blogaddentry.php
+ create mode 100644 blogaddform.php
+ create mode 100644 blogaddforms.css
+ create mode 100644 blogindex.php
+ create mode 100644 blogshow.php
+ create mode 100644 commentaddentry.php
+ create mode 100644 commentaddform.php
+ create mode 100644 docs/how-to-setup-gahblog-repo.txt
+fgl@fgl-desktop:~/gahblog$ git log --pretty=oneline
+8709344edeb2b7f537c26b420317fe8ee25c9b62 2013-11-26 Initial files plus docs/how-
+fgl@fgl-desktop:~/gahblog$ git status
+# On branch master
+nothing to commit, working directory clean
+fgl@fgl-desktop:~/gahblog$ 
+
 
