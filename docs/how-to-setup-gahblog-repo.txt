@@ -253,3 +253,53 @@ fgl@fgl-desktop:~/gahblog$ git status
 no changes added to commit (use "git add" and/or "git commit -a")
 fgl@fgl-desktop:~/gahblog$ 
 
+================
+fgl@fgl-desktop:~/gahblog$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   docs/how-to-setup-gahblog-repo.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+fgl@fgl-desktop:~/gahblog$ git add . -A
+fgl@fgl-desktop:~/gahblog$ git commit -m"2013-11-26 Small change -3 in How-to..."
+[master 1de89e1] 2013-11-26 Small change -3 in How-to...
+ 1 file changed, 81 insertions(+), 1 deletion(-)
+fgl@fgl-desktop:~/gahblog$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+fgl@fgl-desktop:~/gahblog$ git push gahblog
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': garyhds
+Password for 'https://garyhds@github.com': 
+Counting objects: 26, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (25/25), done.
+Writing objects: 100% (25/25), 9.98 KiB | 0 bytes/s, done.
+Total 25 (delta 9), reused 0 (delta 0)
+To https://github.com/garyhds/gahblog
+   f664bb7..1de89e1  master -> master
+fgl@fgl-desktop:~/gahblog$ 
+
