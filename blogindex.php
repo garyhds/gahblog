@@ -1,5 +1,9 @@
 <?php
 /*-- filename: gahblog/blogindex.php
+     GitHub Repository deviation from course
+      - Fri 29 Nov 2013 11:47:17 PST set 2x gahblog coding branches 
+      - implement library/webdataconnect.inc.php OST mysql-server 
+     Regular class project cleanup file structure
       - Sun 18 Aug 2013 11:30:11 PDT reorganized with modifications
       - old filename: lesson10-12_blog/lab11_o1-bloglist.php
      Intro PHP/SQL lesson 11 Project Addressbook - Part 3
@@ -12,20 +16,27 @@
 #--------------------------#
 #   User variables         #
 #--------------------------#
+# implement library/webdataconnect.inc.php OST mysql-server 
+   include("ost_library/webdataconnect.inc.php");
+   $connID = connect_to_mywebdata();
+/*-- before implementation.  now in library include file
 $host = "sql.useractive.com";  // the server where the database resides
 $user = "ghornbec";            // sandbox user login
 $pw = "1001san";               // sandbox password
 $database = "ghornbec";        // my database, same userid as sandbox login
+ */
 # $table_name = "addressbook";   // my addressbook table
 $table_name = "blogs";         // my blogs table, associated table blog_comments
 
 #--------------------------#
 #   Main body              #
 #--------------------------#
+/*-- before implementation.  now in library include file
 $db = mysql_connect($host,$user,$pw)
       or die("Cannot connect to MySQL on $host");
 mysql_select_db($database, $db)
       or die("Cannot connect to database: $database");
+ */
 ?>
 
 <html>
@@ -53,7 +64,8 @@ mysql_select_db($database, $db)
       <th>Blog Entry Date</th>
    </tr>
 
-<?php     
+<?php     //    mysql_close($db);
+
 /* php current blog entry listing with link to detail    */
    $command = "select *, date_format(date_post, '%W, %m/%d/%Y - %h:%i %p CDT') as formated_date from $table_name;";
 // echo "<br> $command <br>";
@@ -69,7 +81,10 @@ mysql_select_db($database, $db)
       print "<td>".$data->formated_date."</td></tr>\n";
    }    
 //    print "Record successfully inserted into $table_name. <br>";
+/*-- before implementation.  now in library include file
     mysql_close($db);
+ */
+    mysql_close($connID);
 ?>
 
 <!--  html end table and page reference to add new blog entries -->
