@@ -2,7 +2,7 @@
 /*-- filename: gahblog/blogindex.php
      GitHub Repository deviation from course
       - Fri 29 Nov 2013 11:47:17 PST set 2x gahblog coding branches 
-      - implement library/webdataconnect.inc.php OST mysql-server 
+      - implement ost_library/webdataconnect.inc.php OST mysql-server 
      Regular class project cleanup file structure
       - Sun 18 Aug 2013 11:30:11 PDT reorganized with modifications
       - old filename: lesson10-12_blog/lab11_o1-bloglist.php
@@ -16,7 +16,7 @@
 #--------------------------#
 #   User variables         #
 #--------------------------#
-# implement library/webdataconnect.inc.php OST mysql-server 
+# implement ost_library/webdataconnect.inc.php OST mysql-server 
    include("ost_library/webdataconnect.inc.php");
    $connID = connect_to_mywebdata();
 /*-- before implementation.  now in library include file

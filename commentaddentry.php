@@ -1,5 +1,9 @@
 <?php
 /*-- filename: gahblog/commentaddentry.php
+     GitHub Repository deviation from course
+      - Wed 04 Dec 2013 14:17:11 PST set 2x gahblog coding branches 
+      - implement ost_library/webdataconnect.inc.php OST mysql-server 
+     Regular class project cleanup file structure
       - Sun 18 Aug 2013 11:30:11 PDT reorganized with modifications
       - old filename: include/lab10_o1-blogentry.php
      Intro PHP/SQL lesson 11 Project Address/Phone Book - Part 3
@@ -28,10 +32,15 @@ function check_input ($form_array) {
 #--------------------------#
 #   User variables         #
 #--------------------------#
+# implement ost_library/webdataconnect.inc.php OST mysql-server 
+   include("ost_library/webdataconnect.inc.php");
+   $connID = connect_to_mywebdata();
+/*-- before implementation.  now in library include file
 $host = "sql.useractive.com";  // the server where the database resides
 $user = "ghornbec";            // sandbox user login
 $pw = "1001san";               // sandbox password
 $database = "ghornbec";        // my database, same userid as sandbox login
+ */
 # $table_name = "addressbook";   // my addressbook table
 # $table_name = "blogs";         // my blogs table, associated table blog_comments
 $table_name = "blog_comments"; // my blog_comments table, associated table blogs
@@ -43,11 +52,12 @@ if (check_input($_POST)) {
 // echo "<br> main body return 1 form_array contents <br>";
 // print_r($form_array);
 // echo "<br> main body return 1 with form_array contents <br>";
+/*-- before implementation.  now in library include file
    $db = mysql_connect($host,$user,$pw)
          or die("Cannot connect to MySQL on $host");
    mysql_select_db($database, $db)
          or die("Cannot connect to database: $database");
-         
+ */
    /* set timestamp based fields - blogid and date_post */
    #$blogid = time();  // unix system time int(10) seconds from 01-01-1970 midnight
    #$date_post = date("Y-m-d G:i:s", $blogid); // formated to 2013-08-03 12:15:30
@@ -64,7 +74,10 @@ if (check_input($_POST)) {
     $result = mysql_query($command);
     
     print "Record successfully inserted into $table_name. <br>";
+/*-- before implementation.  now in library include file
     mysql_close($db);
+ */
+    mysql_close($connID);
 }
 
 else { 

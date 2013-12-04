@@ -1,5 +1,9 @@
 <?php
 /*-- filename: gahblog/blogshow.php
+     GitHub Repository deviation from course
+      - Wed 04 Dec 2013 14:10:56 PST set 2x gahblog coding branches 
+      - implement ost_library/webdataconnect.inc.php OST mysql-server 
+     Regular class project cleanup file structure
       - Sun 18 Aug 2013 11:30:11 PDT reorganized with modifications
       - old filename: include/lab11_o1-blogdetail.php
      Intro PHP/SQL lesson 11 Project Addressbook - Part 3
@@ -20,10 +24,15 @@ function check_input ($form_array) {
 #   User variables         #
 #--------------------------#
 /*   database connection done in calling php.   */
+# implement ost_library/webdataconnect.inc.php OST mysql-server 
+   include("ost_library/webdataconnect.inc.php");
+   $connID = connect_to_mywebdata();
+/*-- before implementation.  now in library include file
 $host = "sql.useractive.com";  // the server where the database resides
 $user = "ghornbec";            // sandbox user login
 $pw = "1001san";               // sandbox password
 $database = "ghornbec";        // my database, same userid as sandbox login
+ */
 # $table_name = "addressbook";   // my addressbook table
 $table_name = "blogs";          // my blogs table, associated table blog_comments
 $table_name2 = "blog_comments"; // my blog_comments table, associated table blogs
@@ -32,10 +41,12 @@ $table_name2 = "blog_comments"; // my blog_comments table, associated table blog
 #--------------------------#
 if (check_input($_GET)) {
    $selectedid = $_GET['postid'];
+/*-- before implementation.  now in library include file
    $db = mysql_connect($host,$user,$pw)
          or die("Cannot connect to MySQL on $host");
    mysql_select_db($database, $db)
          or die("Cannot connect to database: $database");
+ */
 ?>
 <html>
 <head>
